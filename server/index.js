@@ -8,7 +8,11 @@ app.use(express.json());
 
 async function mongoConnect (){
     try {
+        // connect to assignment database
         await mongoose.connect(MONGO_URL);
+        // await mongoose.connect(MONGO_URL,function(err,database){
+            
+        // });
         console.log('MongoDB connected');
     } catch (error) {
         console.log(error);
